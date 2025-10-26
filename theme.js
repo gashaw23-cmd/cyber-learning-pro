@@ -1,0 +1,1 @@
+(function(){const s=document.getElementById('themeSel');function a(m){const r=document.documentElement;if(m==='light')r.classList.add('light');else r.classList.remove('light');localStorage.setItem('clp_theme',m)}const saved=localStorage.getItem('clp_theme')||'dark';if(s)s.value=saved;a(saved);if(s)s.onchange=()=>a(s.value)})();

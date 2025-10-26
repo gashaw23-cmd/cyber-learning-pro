@@ -1,0 +1,24 @@
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>הגדרת מבחן — Cyber Learning Pro</title><link rel="stylesheet" href="./style.css"/></head>
+<body><div class="wrap">
+<div class="nav"><a href="./" class="btn secondary">🏠 למסך הראשי</a>
+<div class="switch"><label for="themeSel">🎨 מצב</label><select id="themeSel"><option value="system">מערכת</option><option value="dark" selected>כהה</option><option value="light">בהיר</option></select></div></div>
+<div class="card"><h2>הגדרת מבחן</h2><div class="grid"><div>
+<label>OpenAI API Key (אופציונלי)</label><input id="apiKey" type="text" placeholder="sk-..."/>
+<small class="hint">המפתח נשמר מקומית בלבד.</small>
+<label style="margin-top:10px">העלאת מסמך (PDF / DOCX / TXT)</label><input id="fileInput" type="file" accept=".pdf,.docx,.txt"/>
+<div class="muted" style="margin-top:6px">או הדבק טקסט ידנית:</div><textarea id="manualText" placeholder="הדבק כאן טקסט (אופציונלי)"></textarea>
+</div><div>
+<label>רמת קושי</label><select id="difficulty"><option>קל</option><option selected>בינוני</option><option>קשה</option></select>
+<label>מספר שאלות</label><input id="numQ" type="number" min="1" max="30" value="8"/>
+<label>מגבלת זמן (דקות, אופציונלי)</label><input id="timeLimit" type="number" min="1" placeholder="ללא"/>
+<div style="margin-top:12px"><button id="makeBtn" class="btn">צור מבחן</button>
+<button id="clearKey" class="btn secondary" type="button">מחק מפתח</button></div>
+<div id="status" class="muted" style="margin-top:8px"></div>
+</div></div></div>
+<div id="quizCard" class="card" style="display:none"><h2 id="quizTitle">מבחן</h2><div id="questionZone"></div>
+<div class="center" style="margin-top:10px"><button id="nextBtn" class="btn">בדיקה והבא</button>
+<button id="skipBtn" class="btn secondary" type="button">דלג</button>
+<button id="finishBtn" class="btn secondary" type="button">סיים</button></div><div id="feedback" style="margin-top:12px"></div></div>
+<div class="footer">© Cyber Learning Pro</div></div>
+<script src="./theme.js"></script><script src="./script.js"></script></body></html>
